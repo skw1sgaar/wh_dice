@@ -5,5 +5,5 @@ project(wh_dice)
 add_executable(wh_dice
 src/main.cpp)
 
-target_include_directories(wh_dice
+target_include_directories(wh_dice PUBLIC
 include)

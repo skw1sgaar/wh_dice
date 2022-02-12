@@ -6,12 +6,19 @@
 class dice_roll{
     private:
     int dice_num;
+
+    const int DICE_MAX = 6;
    
     std::vector<int> rolls;
 
-    public:
     void better_insert(int val);
 
-    void roll_dice(); 
+    void reroll();
+    
+    public:
+
+    dice_roll(char* args[]); // number of rolls
+
+    int roll_dice(); 
 };
 #endif // DICE_ROLL_H
