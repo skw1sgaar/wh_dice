@@ -3,6 +3,16 @@
 
 #include <vector>
 
+// TODO Redo this, and plan it better
+
+// All the modifiers that are common
+enum modifier{
+    reroll_1,
+    reroll_all,
+    plus_1,
+    minus_1
+};
+
 class dice_roll{
     private:
     int dice_num;
@@ -13,7 +23,7 @@ class dice_roll{
 
     void better_insert(int val);
 
-    void reroll();
+    void reroll(std::vector<modifier> mods, int &dice);
     
     public:
 
@@ -21,4 +31,5 @@ class dice_roll{
 
     int roll_dice(); 
 };
+
 #endif // DICE_ROLL_H

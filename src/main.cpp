@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
         return EXIT_FAILURE;
     }
 
-    dice_roll roll(argv);
+    dice_roll roll();
 
     return EXIT_SUCCESS;
 }
