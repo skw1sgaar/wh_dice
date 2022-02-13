@@ -1,19 +1,18 @@
 #ifndef DICE_H
 #define DICE_H
 
-/**
- * @brief An individual dice. Can be rerolled
- * 
- */
+#include "stdlib.h"
+#include "time.h"
 
-class Dice{
-    public:
-        const int MAX_DICE = 6; 
+typedef struct dice_roll{
+    int *dice;
+    size_t size;
+    size_t limit;
+}
 
-        int value;
+dice_roll grab_dice(int num);
 
-        Dice(int val);
-};
+int roll();
 
 
-#endif 
+#endif // DICE_H
